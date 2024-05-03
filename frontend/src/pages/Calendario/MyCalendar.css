@@ -1,0 +1,221 @@
+/* Estilização do Container */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 20px;
+}
+
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal input,
+.modal textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.modal textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.modal .button-group button {
+  flex: 1 1 auto; /* Permite que os botões cresçam e encolham */
+  margin: 5px; /* Espaço entre os botões */
+}
+
+/* Ajustes Específicos para Botões de Ações Principais e Secundárias */
+.modal .primary-action {
+  background-color: #4caf50; /* Cor verde para ações principais */
+}
+
+.modal .secondary-action {
+  background-color: #f44336; /* Cor vermelha para ações secundárias */
+}
+
+.modal button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4a76a8;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.modal button:hover {
+  background-color: #367bb7;
+}
+
+.modal .button-group {
+  display: flex;
+  justify-content: space-between; /* Espaço igual entre os botões */
+  width: 100%; /* A largura total do container */
+  flex-wrap: wrap; /* Permite que os botões se organizem em múltiplas linhas */
+}
+
+.react-big-calendar {
+  width: 100%;
+  max-width: 1000px; /* Tamanho máximo aumentado */
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais dramática */
+  border-radius: 15px; /* Bordas arredondadas */
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.rbc-header {
+  background-color: #4a76a8;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 3px solid #fff; /* Bordas mais espessas */
+}
+
+/* Botões e Navegação */
+.rbc-toolbar button {
+  background-color: #4a76a8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s; /* Adicionado transformação */
+}
+
+.rbc-toolbar button:hover {
+  background-color: #3a5d7d;
+  transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+/* Estilo dos Eventos */
+.rbc-event {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  padding: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Destaque para o Dia Atual */
+.rbc-today {
+  background-color: #eaf6ff;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal .date-time-picker {
+  width: 90%; /* Largura ajustada */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+}
+
+.time-picker .react-time-picker__button {
+  display: none; /* Remove o botão padrão do time picker */
+}
+
+.complete-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #28a745; /* Cor verde para indicar ação de 'concluir' */
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.complete-button:hover {
+  background-color: #218838; /* Um tom mais escuro de verde ao passar o mouse */
+}
+
+/* Sobrescrever o outline de foco do Material-UI */
+.modal .date-time-picker .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: transparent; /* Define a cor da borda como transparente */
+  border-width: 0; /* Define a largura da borda como 0 */
+}
+
+/* Alternativamente, se você quiser remover o outline completamente */
+.modal .date-time-picker .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  outline: none; /* Remove o outline completamente */
+}
+
+/* Remove a borda do estado padrão e focado do TextField */
+.modal .date-time-picker .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border: none; /* Remove qualquer borda */
+}
+
+/* Remove o efeito de foco que pode estar adicionando uma borda ou sombra */
+.modal .date-time-picker .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: none; /* Remove a borda ao focar */
+  box-shadow: none; /* Remove qualquer sombra ao focar */
+}
+
+/* Se você também quiser remover o efeito de clique */
+.modal .date-time-picker .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  outline: none; /* Remove o outline que aparece ao clicar */
+}
+
+.rbc-event-concluido {
+  background-color: #6c757d !important; /* Um cinza claro para eventos concluídos */
+  color: #FFF !important; /* Texto branco para contrastar */
+  text-decoration: line-through !important; /* Adiciona um risco no texto */
+}
+
+.rbc-event-label {
+  font-weight: bold; /* Torna o texto do evento em negrito */
+}
+
+.rbc-event-content {
+  text-transform: uppercase; /* Torna o texto do evento em maiúsculas */
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .react-big-calendar {
+    width: 100%;
+    max-width: 100%; /* Ajuste para telas menores */
+  }
+  .calendar-container {
+    height: auto; /* Altura auto para melhor visualização em dispositivos móveis */
+  }
+}

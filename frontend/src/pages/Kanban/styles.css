@@ -1,0 +1,36 @@
+/* Adicione estilos ao componente Board */
+.react-trello-board .react-trello-lane .react-trello-card {
+    padding: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.react-trello-board .react-trello-lane {
+    overflow-y: auto;
+    max-height: 600px; /* Ajuste o valor conforme necessário */
+    border-radius: 10px;
+}
+
+/* Estilize o scroll para navegadores Webkit (Google Chrome, Safari, Opera GX) */
+.react-trello-board .react-trello-lane::-webkit-scrollbar,
+.react-trello-board .react-trello-lane::-o-scrollbar {
+    width: 6px; /* Ajuste a largura conforme necessário */
+    height: 6px; /* Ajuste a altura conforme necessário */
+}
+
+.react-trello-board .react-trello-lane::-webkit-scrollbar-thumb,
+.react-trello-board .react-trello-lane::-o-scrollbar-thumb {
+    background-color: #000 !important;
+    border: 10px solid transparent !important;
+    border-radius: 6px !important; /* Ajuste o raio conforme necessário para tornar mais arredondado */
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Estilize o scroll para navegadores Firefox e outros navegadores que suportam scrollbar-width e scrollbar-color */
+.react-trello-board .react-trello-lane {
+    scrollbar-width: thin;
+    scrollbar-color: #000 transparent;
+}
+
+.react-trello-board .react-trello-lane::-webkit-scrollbar-track,
+.react-trello-board .react-trello-lane::-o-scrollbar-track {
+    background-color: transparent !important;
+}
